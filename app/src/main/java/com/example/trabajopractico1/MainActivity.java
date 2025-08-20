@@ -21,18 +21,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         br = new ModoAvion();
-        IntentFilter filter = new IntentFilter(ACTION_AIRPLANE_MODE_CHANGED);
-        registerReceiver(br, filter);
     }
 
-    /*
     @Override
     protected void onResume() {
         super.onResume();
-        registerReceiver(br, new IntentFilter(ACTION_AIRPLANE_MODE_CHANGED));
+        IntentFilter filter = new IntentFilter(ACTION_AIRPLANE_MODE_CHANGED);
+        registerReceiver(br, filter);
     }
-    */
-
 
     @Override
     protected void onStop() {
